@@ -31,7 +31,7 @@ int *sieve = (int *) malloc(sizeof(int) * length);
   
 3. 强制转换 malloc 的返回值并没有错，但画蛇添足！例如，日后你有可能把 double* 改成 int* ，这时，你就要把所有相关的`(double*)malloc(sizeof(double))`改成`(int*)malloc(sizeof(int))`，如果改漏了，那么你的程序就存在 bug。
 
-注意，以上都是以 C 语言为基础上成立的，在 C++ 中则是不一样，C++ 是不允许 void* 隐式转换为其它类型的，所以需要显示转换，一般用 static_cast。
+注意，以上都是以 C 语言为基础上成立的，在 C++ 中则是不一样，**C++ 是不允许 void* 隐式转换为其它类型的**，所以**需要显示转换**，一般用 **static_cast。**
 
 ## 参考
 
